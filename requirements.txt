@@ -1,0 +1,14 @@
+duckduckgo-search
+faiss-cpu
+fastapi
+fastapi-cors
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+langchain
+langchain_experimental
+openai
+sse_starlette
+tiktoken
+unstructured
+uvicorn

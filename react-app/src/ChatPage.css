@@ -1,0 +1,71 @@
+.chat-container {
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Maximum width to maintain readability */
+    margin: auto; /* Center the container */
+    padding: 20px; /* Padding inside the container */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    height: calc(100vh - 40px); /* Full height minus padding (top and bottom) */
+    display: flex;
+    flex-direction: column; /* Children stacked vertically */
+    background-color: #f2f2f2; /* Light grey background for the container */
+}
+
+.chat-history {
+    flex-grow: 1; /* Allow chat history to take up available space */
+    overflow-y: auto; /* Enable vertical scroll if content overflows */
+    border: 1px solid #ddd; /* Border for chat history */
+    margin-bottom: 20px; /* Margin at the bottom */
+    padding: 10px; /* Padding inside chat history */
+    background-color: #ffffff; /* White background for the chat history area */
+    text-align: left; /* Default text alignment to the left */
+    display: flex;
+    flex-direction: column; /* Stack chat messages vertically */
+    align-items: flex-start; /* Align messages to the start by default */
+    padding-bottom: 50px; /* Add more padding at the bottom */
+    margin-bottom: -50px; /* Negative margin to counteract the extra padding for scrolling */
+}
+
+.chat-message {
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    max-width: 80%; /* Maximum width for messages */
+    word-wrap: break-word; /* Ensure the text breaks to avoid overflow */
+}
+
+.chat-message.user {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end; /* Align user messages to the end (right) */
+    margin-left: 20%; /* If you want to ensure it does not exceed 80% width */
+}
+
+.chat-message.server {
+    background-color: #f8f9fa;
+    color: black;
+    align-self: flex-start; /* Align server messages to the start (left) */
+}
+
+.chat-input {
+    display: flex;
+}
+
+.chat-input input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+}
+
+.chat-input button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.loader-container {
+    margin: auto;
+}
