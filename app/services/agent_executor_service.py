@@ -5,7 +5,8 @@ from langchain_core.messages import SystemMessage
 
 import logging
 
-from app.config.config import AgentConfig
+from config.config import AgentConfig
+from utils import agent_tools
 
 logger = logging.getLogger(__name__)
 
@@ -15,9 +16,8 @@ class AgentExecutorService:
 
     @classmethod
     def initialize(cls):
-        # local import because agent_tools needs the rag vector store to be initialized first
-        from app.utils import agent_tools
-        tools = [agent_tools.neuradev_rag_tool, agent_tools.google_serper_tool]
+
+        tools = agent_tools.get_enabled_tools()
         llm = ChatOpenAI(temperature=0, model_name="gpt-4-1106-preview")
 
         cls._agent_executor = create_conversational_retrieval_agent(

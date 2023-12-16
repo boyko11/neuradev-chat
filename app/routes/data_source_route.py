@@ -4,11 +4,11 @@ from typing import Any
 from fastapi import APIRouter
 
 
-from app.models.data_sources_model import DataSourcesModel
-from app.services.google_drive_data_source_service import GoogleDriveDataSourceService
-from app.services.text_splitter_service import TextSplitterService
-from app.services.url_data_source_service import UrlDataSourceService
-from app.services.vector_db_service import VectorDBService
+from models.data_sources_model import DataSourcesModel
+from services.google_drive_data_source_service import GoogleDriveDataSourceService
+from services.text_splitter_service import TextSplitterService
+from services.url_data_source_service import UrlDataSourceService
+from services.vector_db_service import VectorDBService
 
 data_sources_router = APIRouter(
     prefix='/data-sources'

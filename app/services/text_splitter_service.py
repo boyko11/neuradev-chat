@@ -1,5 +1,5 @@
-from app.config.config import TextSplitterConfig
-from app.services.recursive_character_text_splitter_service import RecursiveCharacterTextSplitterService
+from config.config import TextSplitterConfig
+from services.recursive_character_text_splitter_service import RecursiveCharacterTextSplitterService
 
 
 class TextSplitterService:

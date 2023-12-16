@@ -2,8 +2,8 @@ import logging
 
 from fastapi import APIRouter, HTTPException
 
-from app.models.chat_message_model import ChatMessageModel
-from app.services.agent_executor_service import AgentExecutorService
+from models.chat_message_model import ChatMessageModel
+from services.agent_executor_service import AgentExecutorService
 
 chat_router = APIRouter(prefix='/chat')
 logger = logging.getLogger(__name__)

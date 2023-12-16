@@ -1,9 +1,11 @@
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 
-from app.routes.chat_route import chat_router
-from app.routes.data_source_route import data_sources_router
+
 import logging
+
+from routes.chat_route import chat_router
+from routes.data_source_route import data_sources_router
 
 app = FastAPI()
 

@@ -4,7 +4,7 @@ from typing import List
 from langchain_community.document_loaders import GoogleDriveLoader
 from langchain_core.documents import Document
 
-from app.services.abstract_source_list_doc_loader import AbstractSourceListDocLoader
+from services.abstract_source_list_doc_loader import AbstractSourceListDocLoader
 
 logger = logging.getLogger(__name__)
 
