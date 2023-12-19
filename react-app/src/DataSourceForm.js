@@ -43,7 +43,8 @@ function DataSourceForm() {
         const filteredFolderIds = folderIds.filter(id => id.trim() !== '');
 
         try {
-            const response = await axios.post('http://localhost:8000/data-sources/', { urls: filteredUrls, gdrive_folder_ids: filteredFolderIds });
+            const response = await axios.post('http://localhost:8000/data-sources/',
+                { urls: filteredUrls, gdrive_folder_ids: filteredFolderIds });
             console.log(response.data);
             navigate('/chat');
         } catch (error) {
@@ -68,7 +69,8 @@ function DataSourceForm() {
                             onChange={(e) => handleUrlChange(index, e)}
                         />
                     ))}
-                    <button onClick={handleAddUrl} className="btn btn-link"><i className="bi bi-plus-circle"></i> Add URL</button>
+                    <button onClick={handleAddUrl} className="btn btn-link">
+                        <i className="bi bi-plus-circle"></i> Add URL</button>
                 </div>
                 <div className="col-md-6">
                     <h3>Google Drive Folder IDs</h3>
@@ -81,7 +83,8 @@ function DataSourceForm() {
                             onChange={(e) => handleFolderIdChange(index, e)}
                         />
                     ))}
-                    <button onClick={handleAddFolderId} className="btn btn-link"><i className="bi bi-plus-circle"></i> Add Folder ID</button>
+                    <button onClick={handleAddFolderId} className="btn btn-link">
+                        <i className="bi bi-plus-circle"></i> Add Folder ID</button>
                 </div>
             </div>
             <div className="text-center mt-4">

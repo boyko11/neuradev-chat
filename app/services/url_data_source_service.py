@@ -1,7 +1,7 @@
 import logging
 from typing import List
 
-from langchain_community.document_loaders import GoogleDriveLoader, UnstructuredURLLoader
+from langchain_community.document_loaders import UnstructuredURLLoader
 from langchain_core.documents import Document
 
 from services.abstract_source_list_doc_loader import AbstractSourceListDocLoader
@@ -17,5 +17,5 @@ class UrlDataSourceService(AbstractSourceListDocLoader):
         loader = UnstructuredURLLoader(urls=url_list)
         docs = loader.load()
 
-        logger.info(f'Num of total self: {len(docs)}')
+        logger.info(f'Num of total url docs: {len(docs)}')
         return docs

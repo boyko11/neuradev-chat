@@ -22,7 +22,7 @@ class GoogleDriveDataSourceService(AbstractSourceListDocLoader):
             )
             this_folder_docs = loader.load()
             docs += this_folder_docs
-            logger.info(f'gdrive_folder_id: {gdrive_folder_id}, num of self: {len(this_folder_docs)}')
+            logger.info(f'gdrive_folder_id: {gdrive_folder_id}, num of docs: {len(this_folder_docs)}')
 
-        logger.info(f'Num of total self: {len(docs)}')
+        logger.info(f'Num of total google drive docs: {len(docs)}')
         return docs
